@@ -5,29 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="pagina-producto.css">
+    <script src="pagina-producto.js" defer></script> 
+    <!-- Con defer el script espera a que todo el html este cargado -->
     <title>WHAL PRO BASIC</title>
 </head>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const mainImage = document.getElementById('main-image');
-        const thumbnails = document.querySelectorAll('.thumb');
-
-        thumbnails.forEach(thumb => {
-            thumb.addEventListener('click', function () {
-
-                mainImage.src = this.src;
-
-                thumbnails.forEach(t => t.classList.remove('activa'));
-                this.classList.add('activa');
-            });
-        });
-    });
-</script>
-
 <body>
     <header>
         <a href="menu-principal.html"><h1>BarberStore</h1></a> 
-        <input type="text" class="buscador" placeholder="Buscar productos">
+        <input type="text   " class="buscador" placeholder="Buscar productos">
     </header>
     <main>
         <section class="producto-grid">
